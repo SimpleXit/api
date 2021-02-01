@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.3" />
+    <PackageReference Include="Moq" Version="4.15.2" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="3.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ProductService\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\SimpleX.Common\SimpleX.Common.csproj" />
+    <ProjectReference Include="..\..\..\Core\SimpleX.Helpers\SimpleX.Helpers.csproj" />
+    <ProjectReference Include="..\..\..\Domain\SimpleX.Domain.Mappings\SimpleX.Domain.Mappings.csproj" />
+    <ProjectReference Include="..\..\..\Domain\SimpleX.Domain.Models\SimpleX.Domain.Models.csproj" />
+    <ProjectReference Include="..\..\..\Domain\SimpleX.Domain.Services\SimpleX.Domain.Services.csproj" />
+    <ProjectReference Include="..\..\..\Domain\SimpleX.Domain.Validation\SimpleX.Domain.Validation.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\SimpleX.Common\SimpleX.Common.csproj" />
+    <ProjectReference Include="..\..\Core\SimpleX.Helpers\SimpleX.Helpers.csproj" />
+    <ProjectReference Include="..\..\Data\SimpleX.Data.Entities\SimpleX.Data.Entities.csproj" />
+    <ProjectReference Include="..\..\Data\SimpleX.Data\SimpleX.Data.csproj" />
+    <ProjectReference Include="..\SimpleX.Domain.InOut\SimpleX.Domain.InOut.csproj" />
+    <ProjectReference Include="..\SimpleX.Domain.Models\SimpleX.Domain.Models.csproj" />
+    <ProjectReference Include="..\SimpleX.Domain.Validation\SimpleX.Domain.Validation.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>

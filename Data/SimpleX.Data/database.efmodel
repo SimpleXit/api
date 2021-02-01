@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="3.0.2.0" Id="cba47279-0950-4257-bb2c-e4d5e72a52a4" entityContainerName="database" namespace="SimpleX.Data.Context" automaticMigrationsEnabled="false" entityOutputDirectory="Entities" contextOutputDirectory="Context" enumOutputDirectory="Entities" fileNameMarker="gen" transformOnSave="false" defaultIdentityType="Guid" showCascadeDeletes="false" databaseType="None" warnOnMissingDocumentation="false" structOutputDirectory="Entities" entityNamespace="SimpleX.Data.Entities" exposeForeignKeys="true" propertyAccessModeDefault="Property" generateDbContextFactory="false" xmlns="http://schemas.microsoft.com/dsltools/EFModel">
+  <classes>
+    <modelRootHasClasses Id="eb1cc284-3fa5-4c33-9015-17a1cc9ec026">
+      <modelClass Id="183b0b5a-a539-49c8-a512-9b11e5c24d00" databaseSchema="dbo" namespace="SimpleX.Data.Entities.App" isNamespaceTracking="false" name="AppMenu" customInterfaces="IEntity" isOutputDirectoryTracking="false" excludeFromMigrations="false">
+        <unidirectionalTargets>
+          <unidirectionalAssociation Id="cf142683-7d27-4660-88eb-09c7411f5a04" targetPropertyName="SubMenus" collectionClass="HashSet" sourceRole="Principal" targetRole="Dependent" foreignKeyLocation="None" targetImplementNotify="false" targetBackingFieldName="_subMenus" targetAutoProperty="true" isTargetAbstract="false">
+            <modelClassMoniker Id="183b0b5a-a539-49c8-a512-9b11e5c24d00" />
+          </unidirectionalAssociation>
+          <unidirectionalAssociation Id="dff0373a-941b-4ee8-97eb-716c411a6988" targetPropertyName="Translations" collectionClass="HashSet" sourceRole="Principal" targetRole="Dependent" foreignKeyLocation="None" targetImplementNotify="false" targetBackingFieldName="_translations" targetAutoProperty="true" isTargetAbstract="false">
+            <modelClassMoniker Id="47b0d87c-d915-416a-83b2-8deea9e935b3" />
+          </unidirectionalAssociation>
+        </unidirectionalTargets>
+        <attributes>
+          <modelAttribute Id="7fb06997-3a78-46ec-818f-8474380761e7" type="Int64" isIdentity="true" required="true" maxLength="" indexed="false" indexedUnique="false" stringType="None" name="Id" autoProperty="true" minLength="0" columnName="Id" columnType="default" implementNotify="false" isForeignKeyFor="00000000-0000-0000-0000-000000000000" backingFieldName="_id" databaseCollation="default" />
+          <modelAttribute Id="9cba7026-cfda-4c9e-8563-a1ff15fa6144" type="long" maxLength="" indexed="false" indexedUnique="false" stringType="None" name="ParentID" autoProperty="true" minLength="0" columnName="ParentID" columnType="default" implementNotify="false" isForeignKeyFor="00000000-0000-0000-0000-000000000000" backingFieldName="_parentID" databaseCollation="default" />
+          <modelAttribute Id="55d32588-bb48-41dd-86cb-a77b39d08c31" required="true" maxLength="" indexed="false" indexedUnique="false" stringType="None" name="Name" autoProperty="true" minLength="0" columnName="Name" columnType="default" implementNotify="false" isForeignKeyFor="00000000-0000-0000-0000-000000000000" backingFieldName="_name" databaseCollation="default" />
+          <modelAttribute Id="63965ecf-e716-45f5-83ba-e8e0674a1c38" required="true" maxLength="" indexed="false" indexedUnique="false" stringType="None" name="View" autoProperty="true" minLength="0" columnName="View" columnType="default" implementNotify="false" isForeignKeyFor="00000000-0000-0000-0000-000000000000" backingFieldName="_view" databaseCollation="default" />
+          <modelAttribute Id="4f617a50-3eb2-4b65-aa14-507822fafaef" required="true" maxLength="" indexed="false" indexedUnique="false" stringType="None" name="Args" autoProperty="true" minLength="0" columnName="Args" columnType="default" implementNotify="false" isForeignKeyFor="00000000-0000-0000-0000-000000000000" backingFieldName="_args" databaseCollation="default" />
+          <modelAttribute Id="b37c5687-7fd1-4bef-8512-c81efec95f0e" type="Boolean" required="true" maxLength="" indexed="false" indexedUnique="false" stringType="None" name="IsActive" autoProperty="true" minLength="0" columnName="IsActive" columnType="default" implementNotify="false" isForeignKeyFor="00000000-0000-0000-0000-000000000000" backingFieldName="_isActive" databaseCollation="default" />
+        </attributes>
+      </modelClass>
+    </modelRootHasClasses>
+    <modelRootHasClasses Id="991aa32e-b279-4be6-b29b-4d93e31ca348">
+      <modelClass Id="445321f0-fc25-42ed-bd97-df74f789a7e4" databaseSchema="dbo" namespace="SimpleX.Data.Entities.App" isNamespaceTracking="false" name="AppPermission" customInterfaces="TrackEntity,IEntity" isOutputDirectoryTracking="false" excludeFromMigrations="false">
+        <attributes>
+          <modelAttribute Id="534bf64f-72ee-492f-b0af-22ea704c5948" type="Int64" isIdentity="true" required="true" maxLength="" indexed="false" indexedUnique="false" stringType="None" name="Id" autoProperty="true" minLength="0" columnName="Id" columnType="default" implementNotify="false" isForeignKeyFor="00000000-0000-0000-0000-000000000000" backingFieldName="_id" databaseCollation="default" />
+          <modelAttribute Id="2c0c6ad3-5488-469f-817f-6b1df300483e" required="true" maxLength="" indexed="false" indexedUnique="false" stringType="None" name="Role" autoProperty="true" minLength="0" columnName="Role" columnType="default" implementNotify="false" isForeignKeyFor="00000000-0000-0000-0000-000000000000" backingFieldName="_role" databaseCollation="default" />
+          <modelAttribute Id="8e343c05-4c51-4c15-8078-42056e66586b" required="true" maxLength="" indexed="false" indexedUnique="false" stringType="None" name="View" autoProperty="true" minLength="0" columnName="View" columnType="default" implementNotify="false" isForeignKeyFor="00000000-0000-0000-0000-000000000000" backingFieldName="_view" databaseCollation="default" />
+          <modelAttribute Id="5c615f47-6822-46f5-9ded-ee88cf77b578" required="true" maxLength="" indexed="false" indexedUnique="false" stringType="None" name="Action" autoProperty="true" minLength="0" columnName="Action" columnType="default" implementNotify="false" isForeignKeyFor="00000000-0000-0000-0000-000000000000" backingFieldName="_action" databaseCollation="default" />
+          <modelAttribute Id="5b035e33-41e0-4c16-b658-7957cdd1eb93" type="Boolean" required="true" maxLength="" indexed="false" indexedUnique="false" stringType="None" name="Allow" autoProperty="true" minLength="0" columnName="Allow" columnType="default" implementNotify="false" isForeignKeyFor="00000000-0000-0000-0000-000000000000" backingFieldName="_allow" databaseCollation="default" />
+          <modelAttribute Id="bad6d38e-4fd7-4bd7-a11b-b6d55435498b" type="Boolean" required="true" maxLength="" indexed="false" indexedUnique="false" stringType="None" name="Deny" autoProperty="true" minLength="0" columnName="Deny" columnType="default" implementNotify="false" isForeignKeyFor="00000000-0000-0000-0000-000000000000" backingFieldName="_deny" databaseCollation="default" />
+        </attributes>
+      </modelClass>
+    </modelRootHasClasses>
+    <modelRootHasClasses Id="8e2100a7-1a59-48b6-8a48-c77f63e8fa46">
+      <modelClass Id="47b0d87c-d915-416a-83b2-8deea9e935b3" databaseSchema="dbo" namespace="SimpleX.Data.Entities" name="AppMenuTranslation" isOutputDirectoryTracking="false" excludeFromMigrations="false" />
+    </modelRootHasClasses>
+    <modelRootHasClasses Id="20ccd733-09b9-4105-bffb-57c3cee1a442">
+      <modelClass Id="1c5a0879-8fd4-424c-bc87-804de482de16" databaseSchema="dbo" namespace="SimpleX.Data.Entities" isNamespaceTracking="false" name="AppSetting" customInterfaces="IEntity" outputDirectory="Entities" excludeFromMigrations="false">
+        <attributes>
+          <modelAttribute Id="99146871-3968-437c-b60a-6e9a7a568a6b" type="Int64" isIdentity="true" required="true" maxLength="" indexed="false" indexedUnique="false" stringType="None" name="Id" autoProperty="true" minLength="0" columnName="Id" columnType="default" implementNotify="false" isForeignKeyFor="00000000-0000-0000-0000-000000000000" backingFieldName="_id" databaseCollation="default" />
+          <modelAttribute Id="9e6e3281-93f1-4370-a892-fac21ce126a5" required="true" maxLength="" indexed="false" indexedUnique="false" stringType="None" name="Category" autoProperty="true" minLength="0" columnName="Category" columnType="default" implementNotify="false" isForeignKeyFor="00000000-0000-0000-0000-000000000000" backingFieldName="_category" databaseCollation="default" />
+          <modelAttribute Id="50dc5d14-dee0-44a8-86e1-57986c784fec" required="true" maxLength="" indexed="false" indexedUnique="false" stringType="None" name="Caption" autoProperty="true" minLength="0" columnName="Caption" columnType="default" implementNotify="false" isForeignKeyFor="00000000-0000-0000-0000-000000000000" backingFieldName="_caption" databaseCollation="default" />
+          <modelAttribute Id="be15c663-4b61-475f-885f-4811f76592bc" required="true" maxLength="" indexed="false" indexedUnique="false" stringType="None" name="Description" autoProperty="true" minLength="0" columnName="Description" columnType="default" implementNotify="false" isForeignKeyFor="00000000-0000-0000-0000-000000000000" backingFieldName="_description" databaseCollation="default" />
+          <modelAttribute Id="87d1a363-3980-42b4-8406-7ad852da1efe" required="true" maxLength="" indexed="false" indexedUnique="false" stringType="None" name="CurrentValue" autoProperty="true" minLength="0" columnName="CurrentValue" columnType="default" implementNotify="false" isForeignKeyFor="00000000-0000-0000-0000-000000000000" backingFieldName="_currentValue" databaseCollation="default" />
+          <modelAttribute Id="6f421e29-e5e9-41c2-a9dc-abe6275b5572" required="true" maxLength="" indexed="false" indexedUnique="false" stringType="None" name="DefaultValue" autoProperty="true" minLength="0" columnName="DefaultValue" columnType="default" implementNotify="false" isForeignKeyFor="00000000-0000-0000-0000-000000000000" backingFieldName="_defaultValue" databaseCollation="default" />
+          <modelAttribute Id="0e9f0857-56ed-4823-aaf6-57e23fe4de86" required="true" maxLength="" indexed="false" indexedUnique="false" stringType="None" name="TypeOfValue" autoProperty="true" minLength="0" columnName="TypeOfValue" columnType="default" implementNotify="false" isForeignKeyFor="00000000-0000-0000-0000-000000000000" backingFieldName="_typeOfValue" databaseCollation="default" />
+          <modelAttribute Id="31348d4f-7b6c-4750-9ccd-5bac13c56a24" required="true" maxLength="" indexed="false" indexedUnique="false" stringType="None" name="ItemSource" autoProperty="true" minLength="0" columnName="ItemSource" columnType="default" implementNotify="false" isForeignKeyFor="00000000-0000-0000-0000-000000000000" backingFieldName="_itemSource" databaseCollation="default" />
+        </attributes>
+      </modelClass>
+    </modelRootHasClasses>
+  </classes>
+  <diagrams>
+    <modelRootHasModelDiagrams Id="4e6d078d-f60d-4bea-ad54-dc72392cbe79">
+      <modelDiagramData name="database" />
+    </modelRootHasModelDiagrams>
+  </diagrams>
+</modelRoot>

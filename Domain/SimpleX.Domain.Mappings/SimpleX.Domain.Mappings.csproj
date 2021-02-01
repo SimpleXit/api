@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Collection" Version="7.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data\SimpleX.Data.Entities\SimpleX.Data.Entities.csproj" />
+    <ProjectReference Include="..\SimpleX.Domain.Models\SimpleX.Domain.Models.csproj" />
+  </ItemGroup>
+
+</Project>
